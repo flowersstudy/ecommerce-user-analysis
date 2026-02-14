@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 数据文件 (大文件不提交到 Git)
+*.csv
+*.zip
+*.tar.gz
+data/
+e-commerce data/
+
+# 输出文件
+outputs/*.png
+outputs/*.jpg
+outputs/*.pdf
+outputs/*.pkl
+
+# 但保留 outputs 目录的 .gitkeep
+!outputs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
