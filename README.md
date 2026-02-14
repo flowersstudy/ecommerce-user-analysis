@@ -171,7 +171,7 @@ python src/churn_prediction.py
 
 ## 👤 作者
 
-**世茵**  
+**周世茵**  
 湘潭大学 · 信息管理与信息系统  
 📧 1501232462@qq.com
 
