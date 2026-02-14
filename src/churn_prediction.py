@@ -136,7 +136,7 @@ class ChurnPredictor:
             'confusion_matrix': cm
         }
     
-    def plot_confusion_matrix(self, save_path='../outputs/confusion_matrix.png'):
+    def plot_confusion_matrix(self, save_path='../data/confusion_matrix.png'):
         """绘制混淆矩阵热力图"""
         cm = confusion_matrix(self.y_test, self.predictions)
         
@@ -154,7 +154,7 @@ class ChurnPredictor:
         print(f"✅ 混淆矩阵已保存: {save_path}")
         plt.close()
     
-    def plot_roc_curve(self, save_path='../outputs/roc_curve.png'):
+    def plot_roc_curve(self, save_path='../data/roc_curve.png'):
         """绘制 ROC 曲线"""
         fpr, tpr, _ = roc_curve(self.y_test, self.probabilities)
         roc_auc = auc(fpr, tpr)
@@ -180,7 +180,7 @@ class ChurnPredictor:
         
         return roc_auc
     
-    def plot_feature_importance(self, save_path='../outputs/feature_importance.png'):
+    def plot_feature_importance(self, save_path='../data/feature_importance.png'):
         """绘制特征重要性（逻辑回归系数）"""
         # 对于逻辑回归，系数代表特征重要性
         coefficients = self.model.coef_[0]
@@ -211,7 +211,7 @@ class ChurnPredictor:
         print(f"✅ 特征重要性图已保存: {save_path}")
         plt.close()
     
-    def predict_churn_risk(self, output_path='../outputs/churn_predictions.csv'):
+    def predict_churn_risk(self, output_path='../data/churn_predictions.csv'):
         """
         为所有用户预测流失风险
         
@@ -240,7 +240,7 @@ class ChurnPredictor:
         
         return self.rfm
     
-    def save_model(self, path='../outputs/churn_model.pkl'):
+    def save_model(self, path='../data/churn_model.pkl'):
         """保存训练好的模型"""
         joblib.dump(self.model, path)
         print(f"\n✅ 模型已保存: {path}")
@@ -255,7 +255,7 @@ def main():
     print("🚀 用户流失预测分析")
     print("="*60)
     
-    rfm_path = '../outputs/rfm_results.csv'
+    rfm_path = '../data/rfm_results.csv'
     if not os.path.exists(rfm_path):
         print(f"错误: 找不到 RFM 数据文件 {rfm_path}")
         print("请先运行 rfm_analysis.py")
@@ -282,7 +282,7 @@ def main():
     print("\n" + "="*60)
     print("🎨 生成可视化图表...")
     print("="*60)
-    os.makedirs('../outputs', exist_ok=True)
+    os.makedirs('../data', exist_ok=True)
     
     predictor.plot_confusion_matrix()
     predictor.plot_roc_curve()

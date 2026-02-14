@@ -166,8 +166,13 @@ class RFMAnalyzer:
 
 def main():
     """主函数"""
+    import os
+    
+    # 确保输出目录存在
+    os.makedirs('../data', exist_ok=True)
+    
     # 初始化分析器
-    analyzer = RFMAnalyzer('../data_analysis/data.csv')
+    analyzer = RFMAnalyzer('../data/data.csv')
     
     # 执行分析流程
     analyzer.load_data()\
@@ -182,7 +187,7 @@ def main():
     print(stats)
     
     # 保存结果
-    analyzer.save_results('../outputs/rfm_results.csv')
+    analyzer.save_results('../data/rfm_results.csv')
     
     return analyzer
 
