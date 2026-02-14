@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 加载 CSV 文件
-data = pd.read_csv('data.csv', encoding='latin1')
+data = pd.read_csv('data/data.csv', encoding='latin1')
 
 # 查看数据的前几行
 print(data.head())
