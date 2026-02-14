@@ -33,14 +33,18 @@ wheels/
 data/
 e-commerce data/
 
-# 输出文件
+# 输出文件（运行生成的大文件）
 outputs/*.png
 outputs/*.jpg
 outputs/*.pdf
 outputs/*.pkl
+outputs/*.csv
 
 # 但保留 outputs 目录的 .gitkeep
 !outputs/.gitkeep
+
+# 保留 README 预览图
+!assets/images/*.png
 
 # IDE
 .vscode/
