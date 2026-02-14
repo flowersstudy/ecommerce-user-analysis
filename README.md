@@ -19,19 +19,46 @@
 
 ```
 ecommerce-user-analysis/
-├── 📊 notebooks/
-│   └── analysis_report.ipynb    # 完整分析报告
-├── 🐍 src/
-│   ├── rfm_analysis.py          # RFM 模型实现
-│   ├── visualization.py         # 可视化模块
-│   └── churn_prediction.py      # 流失预测模型
-├── 🗄️ sql/
-│   └── rfm_analysis.sql         # SQL 分析示例
-├── 📈 outputs/                   # 生成的图表
-├── 📄 reports/                   # 分析报告文档
-├── 📋 README.md                  # 项目说明
-└── 📦 requirements.txt           # 依赖包
+├── 📋 README.md                   # 项目说明文档
+├── 📦 requirements.txt            # Python依赖包
+├── 🚫 .gitignore                 # Git忽略规则
+│
+├── 🎨 assets/                     # 静态资源（README展示图片）
+│   └── images/
+│       ├── user_distribution.png
+│       ├── user_clustering_kmeans.png
+│       ├── monetary_distribution.png
+│       ├── frequency_distribution.png
+│       └── churn_prediction_accuracy.png
+│
+├── 🐍 src/                        # Python源代码
+│   ├── rfm_analysis.py           # RFM模型实现
+│   ├── visualization.py          # 可视化模块
+│   └── churn_prediction.py       # 流失预测模型
+│
+├── 🗄️ sql/                        # SQL分析脚本
+│   └── rfm_analysis.sql          # RFM分析的SQL实现
+│
+├── 📊 notebooks/                  # Jupyter Notebook
+│   └── analysis.ipynb            # 交互式分析（可选但推荐）
+│
+├── 📄 reports/                    # 分析报告文档
+│   └── analysis_report.md        # 详细分析报告
+│
+├── 💾 data/                       # 数据文件（不提交到Git）
+│   └── .gitkeep                  # 占位文件
+│
+└── 📈 outputs/                    # 运行输出（不提交到Git）
+    └── .gitkeep                  # 生成的图表放这里
 ```
+
+**目录说明：**
+- `assets/` - 存放README引用的预览图（必须提交）
+- `src/` - 核心Python代码（必须提交）
+- `sql/` - SQL脚本（展示SQL能力）
+- `notebooks/` - Jupyter交互式分析（加分项）
+- `reports/` - 分析文档
+- `data/` & `outputs/` - 运行时数据，被gitignore忽略
 
 ## 🚀 快速开始
 

@@ -1,0 +1,13 @@
+# Notebooks 目录
+
+此目录存放 Jupyter Notebook 文件，用于交互式数据分析。
+
+## 文件说明
+
+- `analysis.ipynb` - 完整的数据分析流程（从数据加载到可视化）
+
+## 使用方法
+
+```bash
+jupyter notebook notebooks/analysis.ipynb
+```
